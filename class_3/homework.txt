@@ -1,0 +1,21 @@
+You are creating a module that can be used to take quizzes!
+
+example_questionnaire = [
+	{
+		question: "Why did the chicken cross the road?",
+		answer: "B",
+		answer_choices: [
+			"To see it's mom",
+			"To get to the other side",
+			"Because he felt like it",
+			"I don't know"
+		]
+	},
+	{...},
+	{...}
+]
+
+After I'm done taking the quiz, you will tell me how many questions I got right. (Percentage is fine)
+
+- Minimum of 10 questions
+- Maximum of 50 questions

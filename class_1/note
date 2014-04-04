@@ -1,0 +1,23 @@
+def display_board
+	puts _ _ _ _
+		if words = sub [1,4]
+	puts _ _ _
+		if words = sub [0,5]
+	puts _ _ _ _ _
+		if words = sub [2]
+	puts_ _ _ _ _ _
+		if words = sub [3]
+def display_alphabet
+	puts ['a'..'z']
+
+"apple".split("") will be ["a", "p", "p", "l","e"]
+
+# created based on the length of the random word
+
+test = [nil, nil, nil, nil, nil]
+
+["a", "p", "p", "l","e"].each_with_index do | letter, index|
+	if guessed_letter == letter
+		test[index] = guessed_letter
+	end
+end
