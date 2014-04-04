@@ -24,7 +24,4 @@ class User_horse
     end
     print @name
   end
-
-  
-
 end

@@ -3,7 +3,7 @@ require "./villan_horse.rb"
 
 @race = true
 
-def check_win(user_horse, villan_one, villan_two, villan_three)
+def check_win(@user_horse, @villan_one, @villan_two, @villan_three)
   if @user_horse.position >= 20
     puts "You Won"
     @race = false
