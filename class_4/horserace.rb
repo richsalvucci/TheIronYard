@@ -3,17 +3,17 @@ require "./villan_horse.rb"
 
 @race = true
 
-def check_win(@user_horse, @villan_one, @villan_two, @villan_three)
-  if @user_horse.position >= 20
+def check_win(user_horse, villan_one, villan_two, villan_three)
+  if @user_horse.position >= 39
     puts "You Won"
     @race = false
-  elsif @villan_one.position >= 20
+  elsif @villan_one.position >= 39
     puts "Blinky Won"
     @race = false
-  elsif @villan_two.position >= 20
+  elsif @villan_two.position >= 39
     puts "Winky Won"
     @race = false
-  elsif @villan_three.position >= 20
+  elsif @villan_three.position >= 39
     puts "Stinky Won"
     @race = false
   end
