@@ -1,0 +1,311 @@
+* {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+body {
+  font-family: Tauri, sans-serif;
+  margin: 0;
+}
+
+
+
+.wave {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top:0px;
+  left: 0px;
+  right: 0px;
+}
+
+.banner-image {
+  background-image: url('images/banner.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 515px;
+  background-size: 100% 100%;
+}
+
+.overlay{
+  background-color: rgba(0, 51, 255, 0.62);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; 
+}
+.container {
+  width: 1000px;
+  min-height: 800px;
+  margin: 0 auto;
+  border: 1px solid #0033ff;
+}
+
+.header {
+  margin: 0 auto;
+  width: 1000px;
+  height: 515px;
+ 
+}
+.sal {
+  width: 1000px;
+  height: 75px;
+  position: relative;
+  margin-top: 200;
+  margin-left: 200;
+  font-size: 48px;
+  color: white;
+  text-shadow: 1px 1px 2px #223752;
+}
+
+.an{
+  font-family: Tauri, sans-serif;
+  text-align: center;
+  width: 1000px;
+  height:50px;
+  position: relative;
+  margin-left: 0px;
+  margin-top: 29px;
+}
+
+.sal-blog {
+  position: relative;
+  left: 5px;
+  top: 5px;
+}
+
+.about{
+  margin-left: 875px;
+  position: relative;
+  right: 0px;
+  top: -13px;
+}
+
+.left-column{
+  width: 574px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: 5px; 
+}
+
+.headline{
+  font-size: 36px;
+  color: #426DB0;
+  padding-top: 5%;
+}
+
+.little-image{
+  width: 15px;
+  height: 15px;
+  border-radius: 90px;
+  display:inline-block;
+}
+
+.overlay-4{
+  background-color: rgba(0, 51, 255, 0.62);
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 90px;
+  display:inline-block;
+}
+
+.author{
+  width:400px;
+  height: 30px;
+  position: relative;
+  color: #B0C4DE;
+  display:inline-block;
+  right:0;
+} 
+
+.author-txt{
+ display:inline-block; 
+}
+
+
+.post{
+  color: #778899;
+}
+
+.block-quote{
+border-left: 4px solid gray;
+color:#5A7EB7; 
+font-size: 36px; 
+}
+
+.low-post{
+color: #778899;
+}
+
+.buttons{
+width:1000px;
+height:30px;
+margin-left: -5px;
+color: rgb(66,109,176);
+display:inline-block;
+padding-bottom: 10px;
+}
+
+.comments{
+width:150px;
+height:30px;
+background-color: rgb(66,109,176);
+color: white;
+display:inline-block;
+position: relative; 
+text-align: center;
+}
+
+.square{
+width:30px;
+height:30px;
+margin-right: -5;
+background-color: #223752;
+color: white;
+display:inline-block;
+position: relative;
+text-align: center;
+
+}
+.read{
+width:150px;
+height:30px;
+background-color: rgb(66,109,176);
+color: white;
+display:inline-block;
+position: relative;
+text-align: center;
+}
+
+.share{
+width:150px;
+height:30px;
+background-color: rgb(66,109,176);
+color: white;
+display:inline-block;
+position: relative;
+text-align: center;
+}
+
+
+
+.right-column{
+  width: 330px;
+  position: relative;
+  left: 5px;
+  top: 5px;
+  margin-left: 90px;
+  display: inline-block;
+  
+}
+
+.info{
+  text-align: center;
+  padding-top: 50px;
+}
+
+.headshot{
+  width: 90px;
+  height: 90px;
+  margin:0 auto;
+  border-radius: 90px;
+}
+
+.overlay-2{
+  background-color: rgba(0, 51, 255, 0.62);
+  position: absolute;
+  width:90px;
+  height:90px;
+  border-radius: 90px; 
+}
+
+.Larid{
+ color: #456FB1; 
+}
+
+.social{
+ color: #B0C4DE;
+ padding: 10px; 
+}
+
+.sup{
+  /*margin:0 auto;*/
+  /*margin-left: 15px;*/
+ /* padding: 5%;*/
+}
+
+.overlay-3{
+  background-color: rgba(0, 51, 255, 0.62);
+  position: absolute;
+ margin-left: 28px;
+  width:275px;
+  height:183px;
+}
+.side-bar{
+  margin:0 auto;
+ font-size: 20px; 
+ color: #426DB0;
+ padding: 5%;
+ font-weight: bold
+}
+
+.right-text{
+  text-align: left;
+  margin:0 auto;
+  color: #B0C4DE;
+}
+
+
+.footer{
+  background-color: #223752;
+  height: 150px;
+  position: relative;
+}
+
+.footer-text{
+  height:150px;
+  width:1000px;
+  margin: 0 auto;
+}
+
+
+.logo {
+  position: absolute;
+  top: 25px;
+}
+
+.trademark{
+  width:400px;
+  position: absolute;
+  top: 45px;
+  left: 235px;
+  color: white;
+  display: inline-block;
+}
+
+.navigation{
+  width: 350px;
+  position: absolute;
+  font-size: 12px;
+  top: 65px;
+  right: 145px;
+  color: white;
+  display: inline-block;
+
+}
+
+
+
+
+
+
+
+
