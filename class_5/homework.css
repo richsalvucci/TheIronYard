@@ -44,7 +44,7 @@ body {
   width: 1000px;
   min-height: 800px;
   margin: 0 auto;
-  border: 1px solid #0033ff;
+  
 }
 
 .header {
@@ -149,7 +149,6 @@ color: #778899;
 width:1000px;
 height:30px;
 margin-left: -5px;
-color: rgb(66,109,176);
 display:inline-block;
 padding-bottom: 10px;
 }
@@ -163,7 +162,20 @@ display:inline-block;
 position: relative; 
 text-align: center;
 }
+.comment-box{
+  width:200px;
+  display:inline-block;
+}
 
+.share-box{
+  width: 200px;
+  display:inline-block;
+}
+
+.read-box{
+  width:200px;
+  display:inline-block;
+}
 .square{
 width:30px;
 height:30px;
@@ -175,6 +187,7 @@ position: relative;
 text-align: center;
 
 }
+
 .read{
 width:150px;
 height:30px;
