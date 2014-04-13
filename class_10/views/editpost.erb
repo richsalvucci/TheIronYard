@@ -1,0 +1,11 @@
+<% @post.each do |singlepost| %>
+<div class="blog-post">
+  <div class="blog-post-title">
+    <%= singlepost[:title] %>
+  </div>
+  <em><%= singlepost[:timestamp] %></em>
+  <br>
+  <%= singlepost[:content] %>
+</div>
+<% end %>
+<button type="button" class="btn btn-default navbar-btn">Edit Post</button>

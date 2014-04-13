@@ -1,0 +1,10 @@
+<% @blog_posts.each do |post| %>
+<div class="blog-post">
+  <div class="blog-post-title">
+    <%= post[:title] %>
+  </div>
+  <em><%= post[:timestamp] %></em>
+  <br>
+  <%= post[:content] %>
+</div>
+<% end %>
