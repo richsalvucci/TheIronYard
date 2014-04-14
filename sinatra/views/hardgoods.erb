@@ -1,0 +1,9 @@
+
+<% @hardgoods.each do |goods| %>
+<div class= "hardgoods">
+	<img src="<%= goods[:hardgood] %>" class= "hard">
+	<div class="hard-text"><%= goods[:display] %> </div>
+	<br>
+</div>
+
+<% end %>

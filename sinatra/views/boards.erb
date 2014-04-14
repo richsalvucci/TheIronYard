@@ -1,0 +1,9 @@
+	
+<% @surfboard.each do |board| %>
+<div class= "surfboards">
+	<img src="<%= board[:surfboard] %>" class= "boards">
+	<div class="board-text"><%= board[:display] %> </div>
+	<br>
+</div>
+
+<% end %>

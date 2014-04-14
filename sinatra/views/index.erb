@@ -16,6 +16,7 @@
   <div class="navigation">
     <div class="nav-buttons">
       <ul>
+        <li><a href="/root">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/boards">Boards</a></li>
         <li><a href="/hardgoods">Hardgoods</a></li>
@@ -27,14 +28,22 @@
    <h1>Surf Report</h1> 
    <h3>April 11, 2014</h3>
    <h3>Wave: Waist-Chest</h3>
-   <p>Offshore Winds 5-10 MPH, Partly cloudy and mild. Fun little swell, better at the beaches. <br>  Air 56, Water 38. <br> Low Tide 1:49 PM. <br> GOOD DAY TO KNOCK OFF EARLY FROM WORK!
+   <p>Offshore Winds 5-10 MPH, Partly cloudy and mild. Fun little swell, better at the beaches. <br><br>  Air 56, Water 38. <br> Low Tide 1:49 PM. <br><br> GOOD DAY TO KNOCK OFF EARLY FROM WORK!
     <br>
     <br>
     Fun Factor: * * *
    </p>
   </div>    
-  <div class="container"></div>
-  <div class="footer"></div>
+  <div class="container">
+    <%= yield %>
+  </div>
+  <div class="footer">
+    <br>
+    <ul>
+      <li>Sal's Surf Shop</li>
+      <li><%= Faker::Address.street_address %></li>
+      <li><%= Faker::Address.city %> <%= Faker::Address.state %> <%= Faker::Address.zip %></li>
+  </div>
 
 </body>
 </html>

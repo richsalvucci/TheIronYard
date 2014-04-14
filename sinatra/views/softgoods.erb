@@ -1,0 +1,8 @@
+<% @softgoods.each do |soft| %>
+<div class= "softgoods">
+	<img src="<%= soft[:softgood] %>" class= "soft">
+	<div class="soft-text"><%= soft[:display] %> </div>
+	<br>
+</div>
+
+<% end %>
