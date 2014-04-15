@@ -1,0 +1,22 @@
+<h1>Edit Post</h1>
+<form action="/editpost/<%= @post.id %>" method="post">
+  <!-- Don't forget this for any method other than post! -->
+  <input type="hidden" name="_method" value="put">
+  <label>Title
+    <input type="text" name="post[title]" placeholder="<%= @post.title %>"> 
+  </label>
+  <br>
+  <label>Date
+    <input type="text" name="post[date]" placeholder="<%= @post.date %>"> 
+  </label>
+  <br>
+  <label>
+    Content
+    <br>
+    <textarea name="post[content]" placeholder="<%= @post.content %>"></textarea>
+  </label>
+  <br>
+  <input type="submit" value="Edit Post" class="btn-default">
+
+</form>
+<a href="/"><button>Home</button></a>

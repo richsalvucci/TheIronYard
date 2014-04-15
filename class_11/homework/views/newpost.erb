@@ -1,0 +1,26 @@
+<h1>New Blog Post</h1>
+
+<form action="/newpost" method="post">
+  <label>
+    Title
+    <input type="text" name="blog[title]">
+  </label>
+  <br>
+  <label>
+    Date
+    <input type="text" name="blog[date]">
+  </label>
+  <br>
+  <label>
+    Content
+    <br>
+    <textarea name="blog[content]"></textarea>
+  </label>
+  <br>
+  <div class ="post"> 
+    <input type="submit" value="Post Blog" >
+  </div>
+</form>
+<hr>
+<br>
+<a href="/"><button>Home</button></a>

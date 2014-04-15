@@ -1,0 +1,17 @@
+<% @blog_post.reverse_each do |blog| %>
+  <h1> <%= blog[:title] %></h1>
+  <h3> <%= blog[:date] %></h3>
+  <p> <%= blog[:content] %></p>
+    <a href="/editpost/<%= blog.id %>"><button>Edit</button></a> 
+    <br>
+    <br>
+    <div class="delete">
+      <form action="/deletepost/<%= blog.id %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="Delete">
+      </form>
+      <hr>
+      <hr>
+    </div>
+  
+<% end %>
