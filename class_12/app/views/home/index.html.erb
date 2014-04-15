@@ -1,0 +1,22 @@
+<h2>This is a basic blog</h2>
+
+<%= link_to "New Blog", new_blog_path %>
+
+  <ul>
+    <% @posts_on_blog.each do |post| %>
+      <li>
+        <%= post.title %>
+        <br>
+        <%= post.content %>
+
+        <%= link_to "Show", blog_path(post) %>
+        |
+        <%= link_to "New", new_blog_path(post) %>
+        |
+        <%= link_to "Edit", edit_blog_path(post) %>
+        |
+        <%= link_to "Delete", blog_path(post), method: :delete %>
+        <hr>
+      </li>
+    <% end %>
+  </ul>

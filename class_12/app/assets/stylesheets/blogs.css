@@ -1,0 +1,30 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ABE2F7;
+  margin-left: 5em;
+}
+
+h1{
+   width: 5em;
+  position: relative;
+  text-align: left;
+  margin-right: 1em;
+  display:inline-block
+}
+
+label{
+  width: 5em;
+  position: relative;
+  text-align: left;
+  margin-right: 1em;
+  display:inline-block
+}
+
+a{
+  text-decoration: none;
+}
+
+hr{
+  color: black;
+}
