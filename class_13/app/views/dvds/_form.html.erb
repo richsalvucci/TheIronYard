@@ -1,0 +1,30 @@
+<%= form_for @dvd do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <br>
+  <%= f.label :release %>
+  <%= f.text_field :release %>
+  <br>
+  <%= f.label :genre %>
+  <%= f.select :genre, options_for_select(Dvd::GENRE), include_blank:'--- Select ---' %>
+  <br>
+  <%= f.label :director %>
+  <%= f.text_field :director %>
+  <br>
+  <%= f.label :rating %>
+  <%= f.select :rating,options_for_select(Dvd::RATING), include_blank:'--- Select --- ' %>
+  <br>
+  <%= f.label :actors %>
+  <%= f.text_area :actors %>
+  <br>
+  <%= f.label :length %>
+  <%= f.text_field :length %>
+  <br>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <br>
+  <%= f.submit 'Save' %> 
+
+<% end %>
+<hr>
+<%= link_to 'Home', root_path %>

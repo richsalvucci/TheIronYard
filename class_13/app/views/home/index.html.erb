@@ -1,0 +1,18 @@
+<h1>My super cool DVD collection</h1>
+<div class="link">
+<%= link_to 'Add DVD', new_dvd_path %>
+</div>
+<br>
+<hr>
+<% @dvd.each do |dvd| %>
+  <strong><%= dvd.title %></strong>
+  |
+  <%= link_to 'Details', dvd_path(dvd) %>
+  |
+  <%= link_to 'Edit', edit_dvd_path(dvd) %>
+  | 
+  <%= link_to 'Delete', dvd_path(dvd), method: :delete %>
+  <br>
+  <hr>
+
+<% end %>
