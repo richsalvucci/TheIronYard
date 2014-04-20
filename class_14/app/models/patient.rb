@@ -1,10 +1,5 @@
 class Patient < ActiveRecord::Base
   validates :name, presence: true
-  validates :description, presence: true, if: :patient_leaving
-
-  def patient_leaving
-    workflow_state == 'leaving'
-  end
 
 
   def populate_dropdown
@@ -49,7 +44,10 @@ class Patient < ActiveRecord::Base
     state :billpay do
       event :discharge, transitions_to: :leaving
     end
-    state :leaving
+    state :leaving do
+      event :discharge, transitions_to: :leaving
+    end
   end  
 end
+
 

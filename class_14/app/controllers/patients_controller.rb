@@ -73,14 +73,10 @@ class PatientsController < ApplicationController
 
   def discharge
     @patient = Patient.find params[:id]
-    if
-      flash[:error] = "Please enter a description"
-      render :discharge
-    end
   end
 
   private
   def patient_params
-    params.require(:patient).permit(:name, :description, :workflow_state)
+    params.require(:patient).permit(:name, :description, :workflow_state, :notes)
   end
 end
