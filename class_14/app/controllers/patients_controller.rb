@@ -73,6 +73,7 @@ class PatientsController < ApplicationController
 
   def discharge
     @patient = Patient.find params[:id]
+      @patient.save
   end
 
   private
