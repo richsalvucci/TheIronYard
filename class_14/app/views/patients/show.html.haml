@@ -1,9 +1,32 @@
 %h4 This is the state of the patient
-
+= link_to "Home", hospital_path(@hospital)
+%hr
+%br
 = @patient.name
 %br
 = @patient.description
 %br
 = @patient.workflow_state
 %hr
-= link_to "Home", root_path
+
+
+= link_to "Add Doctor", doctor_name_hospital_patient_path(@hospital, @patient)
+|
+
+=link_to "Add Medication", new_hospital_patient_medication_path(@hospital, @patient)
+%ul
+  - @patient.medications.each do |medication|
+    %li
+      = medication.name
+      |
+      = medication.dosage
+      |
+      = link_to "Show", hospital_patient_medication_path(@hospital, @patient, medication)
+      |
+      = link_to "Edit", edit_hospital_patient_medication_path(@hospital, @patient, medication)
+      |
+      = link_to "Delete", hospital_patient_medication_path(@hospital, @patient, medication), method: :delete
+
+  -@patient.doctors.each do |doctor_name|
+    %li
+      =doctor_name.surname

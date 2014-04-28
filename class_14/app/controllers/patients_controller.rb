@@ -1,18 +1,23 @@
 class PatientsController < ApplicationController
-
+  before_filter :find_hospital
+  before_filter :find_patient
+  
   def show
-    @patient = Patient.find params[:id]
+    @medication = Medication.all
+    @hospitals = Hospital.all
   end
 
   def new
-    @patient = Patient.new 
+    @hospitals = Hospital.all
+    @patient = @hospital.patients.new 
   end
 
   def create
-    @patient = Patient.create patient_params
+    # @hospitals = Hospital.all
+    @patient = @hospital.patients.create patient_params
     if @patient.save
       flash[:notice] = "Thank You"
-      redirect_to root_path
+      redirect_to hospital_path(@hospital)
     else
       flash[:error] = "Please enter a name."
       render :new
@@ -20,64 +25,75 @@ class PatientsController < ApplicationController
   end
 
   def edit
-    @patient = Patient.find params[:id]
+    @hospitals = Hospital.all
   end
 
   def update
-    @patient = Patient.find params[:id]
     @patient.update_attributes patient_params
-    redirect_to root_path
+    redirect_to hospital_patient_path
   end
 
   def destroy
-    @paitent = Patient.find params[:id]
     @patient.delete
-    redirect_to root_path
+    redirect_to hospital_patient_path
   end
 
   def waiting
-    @patient = Patient.find params[:id]
     @patient.waiting!
-    redirect_to root_path
+    redirect_to hospital_path
   end
 
   def doctor
-    @patient = Patient.find params[:id]
     @patient.go_to_doctor!
-    redirect_to root_path
+    redirect_to hospital_path(@hospital)
   end
 
   def xray
-    @patient = Patient.find params[:id]
     @patient.go_to_xray!
-    redirect_to root_path
+    redirect_to hospital_path(@hospital)
   end
 
   def surgery
-    @patient = Patient.find params[:id]
     @patient.go_to_surgery!
-    redirect_to root_path
+    redirect_to hospital_path(@hospital)
   end
 
   def billpay
-    @patient = Patient.find params[:id]
     @patient.go_to_billpay!
-    redirect_to root_path
+    redirect_to hospital_path(@hospital)
   end
 
   def leaving
-    @patient = Patient.find params[:id]
     @patient.discharge!
-    redirect_to discharge_patient_path(@patient)
+    redirect_to discharge_hospital_patient_path(@hospital, @patient)
   end
 
   def discharge
-    @patient = Patient.find params[:id]
-      @patient.save
+      # @patient.save 
   end
 
-  private
+  def doctor_name
+    @doctor = @patient.doctors.new
+  end
+
+  def add_doctor 
+    @doctor = @patient.doctors.create doctor_params
+    redirect_to hospital_patient_path
+  end
+
+private
+  def find_patient
+    @patient = Patient.find params[:id]
+  end
+  def find_hospital
+    @hospital = Hospital.find params[:hospital_id]
+  end
+
   def patient_params
-    params.require(:patient).permit(:name, :description, :workflow_state, :notes)
+    params.require(:patient).permit(:name, :description, :workflow_state, :notes, {hospital_ids: []})
+  end
+
+  def doctor_params
+      params.require(:doctor).permit(:surname)
   end
 end

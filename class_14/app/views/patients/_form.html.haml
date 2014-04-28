@@ -1,4 +1,4 @@
-= form_for @patient do |f|
+= form_for [@hospital, @patient] do |f|
   =f.label :name
   =f.text_field :name, placeholder: "Name"
   %br
@@ -7,6 +7,11 @@
   %br
   =f.label :description
   =f.text_area :description, placeholder: "Tell us about how you are feeling."
+  %br
+  - @hospitals.each do |hospital|
+    = check_box_tag 'patient[hospital_ids][]', hospital.id, @patient.hospitals.include?(hospital), {id: "hospital_id_#{hospital.id}"}
+    = label_tag "hospital_id_#{hospital.id}", hospital.name
+    %br
   %br
   =f.submit 
   %br

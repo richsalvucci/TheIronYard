@@ -1,50 +1,59 @@
 .title 
-  %h1 Rich's Happy Hospital
+  %h1 List of Hospitals
 
 %br
 
-= link_to "See a Doctor", new_patient_path
-%ul
-  - @patients_being_seen.each do |patient|
-    %li
-      = patient.name
-      (#{patient.workflow_state})
-      = patient.description
-      = link_to "Show", patient_path(patient)
-      |
-      = link_to "Edit", edit_patient_path(patient)
-      |
-      - if patient.workflow_state == 'waiting'
-        =link_to "Doctor", doctor_patient_path(patient), method: :patch
-        |
-        =link_to "X-Ray", xray_patient_path(patient), method: :patch
-        |
-        =link_to "Surgery", surgery_patient_path(patient), method: :patch
-        |
-        =link_to "Leaving", leaving_patient_path(patient), method: :patch
-      -elsif patient.workflow_state == 'doctor'
-        =link_to "X-Ray", xray_patient_path(patient), method: :patch
-        |
-        =link_to "Surgery", surgery_patient_path(patient), method: :patch
-        |
-        =link_to "Pay Bill", billpay_patient_path(patient), method: :patch
-      -elsif patient.workflow_state == 'xray'
-        =link_to "Doctor", doctor_patient_path(patient), method: :patch
-        |
-        =link_to "Surgery", surgery_patient_path(patient), method: :patch
-        |
-        =link_to "Pay Bill", billpay_patient_path(patient), method: :patch
-      -elsif patient.workflow_state == 'surgery'
-        =link_to "Doctor", doctor_patient_path(patient), method: :patch
-        |
-        =link_to "X-Ray", xray_patient_path(patient), method: :patch
-        |
-        =link_to "Pay Bill", billpay_patient_path(patient), method: :patch
-      -elsif patient.workflow_state == 'billpay'
-        =link_to "Leaving", leaving_patient_path(patient), method: :patch
-%hr
--@patients_completed.each do |patient|
-  = patient.name
-  helped at
-  = patient.updated_at.strftime("%l:%M%p")
-  %br
+= link_to "Create Hospital", new_hospital_path
+%br
+- @hospitals.each do |hospital|
+  = link_to hospital.name, hospital_path(hospital)
+  = link_to "Edit", edit_hospital_path(hospital)
+  |
+  = link_to "Delete", hospital_path(hospital), method: :delete
+  %hr
+
+
+/ %ul
+/   - @patients_being_seen.each do |patient|
+/     %li
+/       = patient.name
+/       (#{patient.workflow_state})
+/       = patient.description
+/       = link_to "Show", hospital_patient_path(patient)
+/       |
+/       = link_to "Edit", edit_hospital_patient_path(patient)
+/       |
+/       - if patient.workflow_state == 'waiting'
+/         =link_to "Doctor", doctor_hospital_patient_path(patient), method: :patch
+/         |
+/         =link_to "X-Ray", xray_hospital_patient_path(patient), method: :patch
+/         |
+/         =link_to "Surgery", surgery_hospital_patient_path(patient), method: :patch
+/         |
+/         =link_to "Leaving", leaving_hospital_patient_path(patient), method: :patch
+/       -elsif patient.workflow_state == 'doctor'
+/         =link_to "X-Ray", xray_hospital_patient_path(patient), method: :patch
+/         |
+/         =link_to "Surgery", surgery_hospital_patient_path(patient), method: :patch
+/         |
+/         =link_to "Pay Bill", billpay_hospital_patient_path(patient), method: :patch
+/       -elsif patient.workflow_state == 'xray'
+/         =link_to "Doctor", doctor_hospital_patient_path(patient), method: :patch
+/         |
+/         =link_to "Surgery", surgery_hospital_patient_path(patient), method: :patch
+/         |
+/         =link_to "Pay Bill", billpay_hospital_patient_path(patient), method: :patch
+/       -elsif patient.workflow_state == 'surgery'
+/         =link_to "Doctor", doctor_hospital_patient_path(patient), method: :patch
+/         |
+/         =link_to "X-Ray", xray_hospital_patient_path(patient), method: :patch
+/         |
+/         =link_to "Pay Bill", billpay_hospital_patient_path(patient), method: :patch
+/       -elsif patient.workflow_state == 'billpay'
+/         =link_to "Leaving", leaving_hospital_patient_path(patient), method: :patch
+/ %hr
+/ -@patients_completed.each do |patient|
+/   = patient.name
+/   helped at
+/   = patient.updated_at.strftime("%l:%M%p")
+/   %br

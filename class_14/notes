@@ -1,0 +1,16 @@
+# patient medication update doesn't redirect
+# when the patient leaves, redirect to the hospital show page instead of the patient itself
+# delete hospital doesn't redirect
+#   nor does it delete
+# editing hospital doesn't work
+# When you create a patient, it should tie itself to a hospital
+#  so when you create a new hospital, the same patients for hospital 1,
+#  should not render for hospital 2
+
+Hospital v3
+
+We are adding on to the hospital applications. I want you to create another entity on the top level of your application. Currently we have Hospitals > Patients > medications.
+
+I want you to turn your single hospital to patient relation into a patient being able to exist in multiple hospitals.
+
+I also want you to create a new entity called "Doctors" that live inside of hospitals. The Doctors should have a polymorphic relationship between patients and Hospitals. They should not belong to both. Think of these doctors as independent physicians who work wherever they want, consulting for the patients who go to the hospital.

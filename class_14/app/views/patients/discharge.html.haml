@@ -1,6 +1,6 @@
 %h4 What treatment happened?
 
-= form_for @patient do |f|
+= form_for [@hospital, @patient] do |f|
   =f.label :notes
   =f.text_area :notes, placeholder: "Tell us about how you are feeling."
   %br
