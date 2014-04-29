@@ -14,7 +14,7 @@ class PatientsController < ApplicationController
 
   def create
     # @hospitals = Hospital.all
-    @patient = @hospital.patients.create patient_params
+    @patient = Patient.create patient_params
     if @patient.save
       flash[:notice] = "Thank You"
       redirect_to hospital_path(@hospital)

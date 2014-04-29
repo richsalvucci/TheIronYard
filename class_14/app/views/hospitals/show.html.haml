@@ -5,7 +5,6 @@
 = link_to "New Patient", new_hospital_patient_path(@hospital)
 |
 = link_to "Add Doctor", doctor_hospital_path(@hospital)
-
 %ul
   - @patients_being_seen.each do |patient|
     %li
