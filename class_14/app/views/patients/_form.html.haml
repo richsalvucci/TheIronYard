@@ -2,6 +2,9 @@
   =f.label :name
   =f.text_field :name, placeholder: "Name"
   %br
+  =f.label :email
+  =f.text_field :email, placeholder: "Email"
+  %br
   =f.label :workflow_state
   =f.select :workflow_state, options_for_select(@patient.populate_dropdown), include_blank:'--- Select ---'
   %br
@@ -14,6 +17,7 @@
     %br
   %br
   =f.submit 
+  %br
   %br
   %hr
   = link_to "Home", root_path

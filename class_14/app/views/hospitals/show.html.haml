@@ -46,6 +46,8 @@
         =link_to "Leaving", leaving_hospital_patient_path(@hospital, patient), method: :patch
 
 %hr
+= render 'patients/search'
+%hr
 %ul
   -@hospital.doctors.each do |doctor_name|
     %li

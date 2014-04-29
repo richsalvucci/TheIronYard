@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :patients do
       resources :medications do
       end
+      collection do
+        get :search_names
+      end
       member do
         patch :waiting
         patch :doctor

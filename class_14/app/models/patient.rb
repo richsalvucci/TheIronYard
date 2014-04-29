@@ -5,6 +5,14 @@ class Patient < ActiveRecord::Base
   has_many :doctors, as: :doctorable
   validates :name, presence: true
 
+  before_create :send_patient_email
+
+  def send_patient_email
+    PatientMailer.new_patient_email(self).deliver
+  end
+
+  scope :search_names, -> search { where("name like?", "%#{search}%") }
+
 
   def populate_dropdown
     if workflow_state == 'waiting'
