@@ -1,0 +1,24 @@
+= form_for [@hospital, @patient] do |f|
+  =f.label :name
+  =f.text_field :name, placeholder: "Name", class: "object-name"
+  %br
+  .required * Name is required
+  %br
+  =f.label :email
+  =f.text_field :email, placeholder: "Email"
+  %br
+  =f.label :workflow_state
+  =f.select :workflow_state, options_for_select(@patient.populate_dropdown), include_blank:'--- Select ---'
+  %br
+  =f.label :description
+  =f.text_area :description, placeholder: "Tell us about how you are feeling."
+  %br
+  - @hospitals.each do |hospital|
+    = check_box_tag 'patient[hospital_ids][]', hospital.id, @patient.hospitals.include?(hospital), {id: "hospital_id_#{hospital.id}"}
+    = label_tag "hospital_id_#{hospital.id}", hospital.name
+    %br
+  =f.submit "Submit", class: "submit" 
+  %br
+  %br
+  %hr
+  = link_to "Home", root_path

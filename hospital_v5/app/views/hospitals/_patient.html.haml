@@ -1,0 +1,37 @@
+
+%li.patient
+  = patient.name
+  (#{patient.workflow_state})
+  = patient.description
+  = link_to "Show", hospital_patient_path(@hospital, patient)
+  |
+  = link_to "Edit", edit_hospital_patient_path(@hospital, patient)
+  |
+  - if patient.workflow_state == 'waiting'
+    =link_to "Doctor", doctor_hospital_patient_path(@hospital, patient), method: :patch
+    |
+    =link_to "X-Ray", xray_hospital_patient_path(@hospital, patient), method: :patch
+    |
+    =link_to "Surgery", surgery_hospital_patient_path(@hospital, patient), method: :patch
+    |
+    =link_to "Leaving", leaving_hospital_patient_path(@hospital, patient), method: :patch
+  -elsif patient.workflow_state == 'doctor'
+    =link_to "X-Ray", xray_hospital_patient_path(@hospital, patient), method: :patch
+    |
+    =link_to "Surgery", surgery_hospital_patient_path(@hospital, patient), method: :patch
+    |
+    =link_to "Pay Bill", billpay_hospital_patient_path(@hospital, patient), method: :patch
+  -elsif patient.workflow_state == 'xray'
+    =link_to "Doctor", doctor_hospital_patient_path(@hospital, patient), method: :patch
+    |
+    =link_to "Surgery", surgery_hospital_patient_path(@hospital, patient), method: :patch
+    |
+    =link_to "Pay Bill", billpay_hospital_patient_path(@hospital, patient), method: :patch
+  -elsif patient.workflow_state == 'surgery'
+    =link_to "Doctor", doctor_hospital_patient_path(@hospital, patient), method: :patch
+    |
+    =link_to "X-Ray", xray_hospital_patient_path(@hospital, patient), method: :patch
+    |
+    =link_to "Pay Bill", billpay_hospital_patient_path(@hospital, patient), method: :patch
+  -elsif patient.workflow_state == 'billpay'
+    =link_to "Leaving", leaving_hospital_patient_path(@hospital, patient), method: :patch
