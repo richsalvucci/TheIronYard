@@ -1,0 +1,13 @@
+= form_for [@hospital, @patient, @medication]  do |f|
+  =f.label :name
+  =f.text_field :name, placeholder: "Name" , class: "object-name"
+  %br
+  .required * Name is required
+  %br
+  =f.label :dosage
+  =f.text_field :dosage, placeholder: "Dosage"
+  %br
+  =f.submit "Submit", class: "submit" 
+  %br
+  %hr
+  = link_to "Home", hospital_patient_path(@hospital, @patient)
