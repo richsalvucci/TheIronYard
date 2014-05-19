@@ -1,0 +1,4 @@
+console.log("<%= @options %>")
+$(".order_form").html(
+  "<%= escape_javascript(render(partial: 'form', locals:{options: @options})) %>"
+  )

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  board_typematerials: MyString
+  graphics: MyString
+  fin_setup: MyString
+  fin_type: MyString
+  tail: MyString
+  glassing: MyString
+  length: 1.5
+  width: 1.5
+  thickness: 1.5
+  special_instructions: MyText
+
+two:
+  board_typematerials: MyString
+  graphics: MyString
+  fin_setup: MyString
+  fin_type: MyString
+  tail: MyString
+  glassing: MyString
+  length: 1.5
+  width: 1.5
+  thickness: 1.5
+  special_instructions: MyText

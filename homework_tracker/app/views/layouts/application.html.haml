@@ -114,8 +114,9 @@
                 My Dashboard
             %hr
               .row
-                %p.notice= notice
-                %p.alert= alert
+                -if notice || alert
+                  %p.notice= notice
+                  %p.alert= alert
                 = yield
                 / /panel
                 / /col-span-6
