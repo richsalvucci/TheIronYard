@@ -108,55 +108,47 @@ class Surfboard < ActiveRecord::Base
   ]
 
   LONGBOARD_OPTIONS = {
-    longboard: {
-      material: MATERIAL,
-      fin_setup:["2+1", "Single"],
-      fin_type: FIN_TYPE,
-      tail:["Squash", "Rounded","Rounded-Pin"],
-      glassing: ["Volan", "S-Glass"],
-      length: [8.0, 8.6, 9.0, 9.6, 10.0,],
-      width: [22.0, 22.25, 22.5, 22.75, 23.0, 23.5, 24.0],
-      thickness: [2.5, 2.75, 3.0, 3.25]
-    }  
+    material: MATERIAL,
+    fin_setup:["2+1", "Single"],
+    fin_type: FIN_TYPE,
+    tail:["Squash", "Rounded","Rounded-Pin"],
+    glassing: ["Volan", "S-Glass"],
+    length: [8.0, 8.6, 9.0, 9.6, 10.0,],
+    width: [22.0, 22.25, 22.5, 22.75, 23.0, 23.5, 24.0],
+    thickness: [2.5, 2.75, 3.0, 3.25]
   }
 
   SHORTBOARD_OPTIONS = {
-    shortboard: {
-      material: MATERIAL,
-      fin_setup:["Thruster", "Convertible"],
-      fin_type: FIN_TYPE,
-      tail:["Squash", "Swallow", "Rounded", "Diamond"],
-      glassing: ["4oz", "6oz"],
-      length: [5.10, 5.11, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6],
-      width: [19.5, 19.75, 20.0, 20.25, 20.5, 20.75, 21.0, 21.25, 21.5, 21.75, 22.0, 22.25],
-      thickness: [2.0, 2.25, 2.5, 2.75]
-    }  
+    material: MATERIAL,
+    fin_setup:["Thruster", "Convertible"],
+    fin_type: FIN_TYPE,
+    tail:["Squash", "Swallow", "Rounded", "Diamond"],
+    glassing: ["4oz", "6oz"],
+    length: [5.10, 5.11, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6],
+    width: [19.5, 19.75, 20.0, 20.25, 20.5, 20.75, 21.0, 21.25, 21.5, 21.75, 22.0, 22.25],
+    thickness: [2.0, 2.25, 2.5, 2.75] 
   }
 
   FUNBOARD_OPTIONS = {
-    funboard: {
-      material: MATERIAL,
-      fin_setup:["Thruster", "2+1", "single", "Convertible"],
-      fin_type: FIN_TYPE,
-      tail:["Squash", "Swallow", "Rounded", "Rounded-Pin"],
-      glassing: ["4oz", "6oz"],
-      length: [6.6, 7.0, 7.2, 7.4, 7.6, 8.0,],
-      width: [19.5, 19.75, 20.0, 20.25, 20.5, 20.75, 21.0, 21.25, 21.5, 21.75, 22.0, 22.25],
-      thickness: [2.0, 2.25, 2.5, 2.75]
-    }  
+    material: MATERIAL,
+    fin_setup:["Thruster", "2+1", "single", "Convertible"],
+    fin_type: FIN_TYPE,
+    tail:["Squash", "Swallow", "Rounded", "Rounded-Pin"],
+    glassing: ["4oz", "6oz"],
+    length: [6.6, 7.0, 7.2, 7.4, 7.6, 8.0,],
+    width: [19.5, 19.75, 20.0, 20.25, 20.5, 20.75, 21.0, 21.25, 21.5, 21.75, 22.0, 22.25],
+    thickness: [2.0, 2.25, 2.5, 2.75]
   }
 
     FISH = {
-    fish: {
-      material: MATERIAL,
-      fin_setup:["Twin", "Quad", "Convertible"],
-      fin_type: FIN_TYPE,
-      tail:["Squash", "Swallow", "Fish"],
-      glassing: ["4oz", "6oz"],
-      length: [5.10, 5.11, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 7.0, 7.2],
-      width: [20.0, 20.25, 20.5, 20.75, 21.0, 21.25, 21.5, 21.75, 22.0, 22.25],
-      thickness: [2.0, 2.25, 2.5, 2.75]
-    }  
+    material: MATERIAL,
+    fin_setup:["Twin", "Quad", "Convertible"],
+    fin_type: FIN_TYPE,
+    tail:["Squash", "Swallow", "Fish"],
+    glassing: ["4oz", "6oz"],
+    length: [5.10, 5.11, 6.0, 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 7.0, 7.2],
+    width: [20.0, 20.25, 20.5, 20.75, 21.0, 21.25, 21.5, 21.75, 22.0, 22.25],
+    thickness: [2.0, 2.25, 2.5, 2.75] 
   }
 
 

@@ -16,6 +16,9 @@ class SurfboardsController < ApplicationController
 
   def new
     @surfboard = Surfboard.new
+    if params[:board_type].blank?
+      params[:board_type] = "Longboard"
+    end
     @options = Surfboard.select_board_type(params[:board_type])
     respond_to do |format|
       format.js

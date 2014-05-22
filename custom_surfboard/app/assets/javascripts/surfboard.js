@@ -14,6 +14,7 @@ var longboard_javascript = function(){
 
 $("div.graphics").tooltip(); 
 $("div.instructions").tooltip();
+
 }
 
 // $('#surfboard_fin_setup')

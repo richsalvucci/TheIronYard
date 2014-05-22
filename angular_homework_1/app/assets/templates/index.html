@@ -1,0 +1,9 @@
+<div class="jumbotron">
+  <h1>{{title}}</h1>
+</div>
+<button class="btn" ng-click="createNewBook()">Add Book</button>
+<div class="row" ng-repeat="book in data.books">
+  <h2><a ng-click="viewBook(book.id)">{{ book.title }}</a></h2>
+  <h4>{{book.author}}</h4>
+  <p>{{book.description}}</p>
+</div>

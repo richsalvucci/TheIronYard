@@ -6,27 +6,27 @@
 
     = f.label :materials
     = f.select :materials,  options_for_select(Surfboard::MATERIAL, @surfboard.materials), include_blank: "Select"
-    %div.fin_setup#fin_setup
+    %div.fin_setup
       = f.label :fin_setup
-      = f.select :fin_setup,  options_for_select(Surfboard::FIN_SETUP, @surfboard.fin_setup), include_blank: "Select"
+      = f.select :fin_setup,  options_for_select(@options[:fin_setup], @surfboard.fin_setup), include_blank: "Select"
     
     = f.label :fin_type
     = f.select :fin_type,  options_for_select(Surfboard::FIN_TYPE, @surfboard.fin_type), include_blank: "Select"
     %div.tail
       = f.label :tail
-      = f.select :tail,  options_for_select(Surfboard::TAIL, @surfboard.tail), include_blank: "Select"
+      = f.select :tail,  options_for_select(@options[:tail], @surfboard.tail), include_blank: "Select"
     %div.glassing
       = f.label :glassing
-      = f.select :glassing,  options_for_select(Surfboard::GLASSING, @surfboard.glassing), include_blank: "Select"
+      = f.select :glassing,  options_for_select(@options[:glassing], @surfboard.glassing), include_blank: "Select"
     %div.length
       = f.label :length
-      = f.select :length, options_for_select(Surfboard::LENGTH, @surfboard.length), include_blank: "Select"
+      = f.select :length, options_for_select(@options[:length], @surfboard.length), include_blank: "Select"
     %div.width
       = f.label :width
-      = f.select :width, options_for_select(Surfboard::WIDTH, @surfboard.width), include_blank: "Select"
+      = f.select :width, options_for_select(@options[:width], @surfboard.width), include_blank: "Select"
     %div.thickness
       = f.label :thickness
-      = f.select :thickness, options_for_select(Surfboard::THICKNESS, @surfboard.thickness), include_blank: "Select" 
+      = f.select :thickness, options_for_select(@options[:thickness], @surfboard.thickness), include_blank: "Select" 
     %div.graphics{"data-placement" => "left", "data-toggle" => "tooltip", :title => "Tell us what you what your board to look like. Airbrushing, Resin Tint, Acid Spash?", :type => "input"} 
       =f.label :graphics
       =f.text_area :graphics 

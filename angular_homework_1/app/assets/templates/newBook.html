@@ -1,0 +1,16 @@
+<form>
+  <label><strong>Title</stong>
+    <input ng-model="formData.newBookTitle">
+  </label>
+  <br>
+  <label><strong>Author</stong>
+    <input ng-model="formData.newBookAuthor">
+  </label>
+  <br>
+  <label><strong>Description</stong>
+    <input ng-model="formData.newBookDescription">
+  </label>
+  <hr>
+  <button class="btn" ng-click="createBook()">Add Book</button>
+  <button class="btn" ng-click="returnHome()">Home</button>
+</form>
