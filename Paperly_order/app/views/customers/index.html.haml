@@ -1,0 +1,9 @@
+-@customers.each do |customer|
+  = customer.name
+  |
+  %customer_link
+    = link_to "View", customer_path(customer)
+  %br 
+%hr
+%button.btn.btn-primary{:type => "button" } 
+  = link_to "Add A Customer", new_customer_path

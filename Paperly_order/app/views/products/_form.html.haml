@@ -1,0 +1,14 @@
+=form_for @product do |f|
+  = f.label :name
+  = f.text_field :name
+  %br
+  = f.label :product_type
+  = f.text_field :product_type
+  %br
+  = f.label :description
+  = f.text_area :description
+  %br
+  = f.label :price
+  = f.text_field :price
+  %br
+  =f.submit "Save Product"

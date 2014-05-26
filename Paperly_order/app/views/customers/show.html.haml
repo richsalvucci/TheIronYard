@@ -1,0 +1,17 @@
+= @customer.name
+%br
+=@customer.address
+%br
+=@customer.state
+%br
+=@customer.zipcode
+%br
+=@customer.phone_number
+%hr
+%button.btn.btn-primary{:type => "button" } 
+  = link_to "Edit Customer", edit_customer_path
+%button.btn.btn-primary{:type => "button" } 
+  = link_to "Delete Customer", customer_path, method: :destroy
+
+%button.btn.btn-primary{:type => "button" } 
+  = link_to "New Order", new_order_path

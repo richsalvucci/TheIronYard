@@ -1,0 +1,6 @@
+= nested_form_for @order do |f|
+  = f.fields_for :products do |product_form|
+    = product_form.select :name,  options_for_select(@products, @products.name), include_blank: "Select"
+    = product_form.link_to_remove "Remove this product"
+  = f.link_to_add "Add a product", :products
+%br

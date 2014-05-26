@@ -1,0 +1,5 @@
+= f.fields_for :products do |product_form|
+  = product_form.select :product,  options_for_select(@products, @products.product), include_blank: "Select"
+  = product_form.product_to_remove "Remove this product"
+  = product_form.product_to_add "Add a product", :products
+%br

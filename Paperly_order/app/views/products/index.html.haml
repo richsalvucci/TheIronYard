@@ -1,0 +1,10 @@
+%h1 Products
+
+-@products.each do |product|
+  = product.name
+  |
+  = link_to "View", product_path(product)
+  %br 
+%hr
+%button.btn.btn-primary{:type => "button" } 
+  = link_to "Add A Product", new_product_path
