@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   resources :customers 
   resources :orders
-  resources :products do
-    resources :options
-  end
+  resources :products
+  resources :options
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

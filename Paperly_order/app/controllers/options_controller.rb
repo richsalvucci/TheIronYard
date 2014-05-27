@@ -28,14 +28,11 @@ class OptionsController < ApplicationController
     redirect_to root_path
   end
 
-  def destoy
-     @product.delete product_params
+  def destroy
+     @option.delete 
     redirect_to root_path
   end
 private
-  def find_product
-    @product = Product.find params[:id]
-  end
 
   def find_options
     @product = Option.find params[:id]

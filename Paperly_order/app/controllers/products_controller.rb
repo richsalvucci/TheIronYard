@@ -26,8 +26,8 @@ class ProductsController < ApplicationController
     redirect_to products_path
   end
 
-  def destoy
-     @product.delete product_params
+  def destroy
+    @product.delete 
     redirect_to root_path
   end
 private
@@ -39,6 +39,7 @@ private
     params.require(:product).permit(:name,
       :price,
       :description,
-      :product_type)
+      :product_type
+      options_attributes: [:color_one,:color_two,:pattern,:personalization :_destroy])
   end 
 end

@@ -1,0 +1,13 @@
+= @product.name
+%br
+= @product.product_type
+%br
+= @product.description
+%br
+= @product.price
+
+%hr
+%button.btn.btn-primary{:type => "button" } 
+  = link_to "Edit Product", edit_product_path
+%button.btn.btn-primary{:type => "button" } 
+  = link_to "Delete Product", product_path, method: :delete

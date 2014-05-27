@@ -26,8 +26,8 @@ class CustomersController < ApplicationController
     redirect_to customers_path
   end
 
-  def destoy
-     @customer.delete customer_params
+  def destroy
+     @customer.delete 
     redirect_to root_path
   end
 private

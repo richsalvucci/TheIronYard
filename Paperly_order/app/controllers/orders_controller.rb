@@ -11,11 +11,12 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
     @products = Product.all
+    @options = Option.all
   end
 
   def create
     @order = Order.create order_params
-    redirect_to custmoer_orders_path
+    redirect_to orders_path
   end
 
   def edit
@@ -27,8 +28,8 @@ class OrdersController < ApplicationController
     redirect_to orders_path
   end
 
-  def destoy
-    @order.delete order_params
+  def destroy
+    @order.delete 
     redirect_to root_path
   end
 private
@@ -40,6 +41,6 @@ private
     params.require(:order).permit(:customer_name,
       :customer_id,
       :product_id,
-      products_attributes: [:product,:order_id, :_destroy])
+      products_attributes: [:product,:name, :_destroy])
   end 
 end
