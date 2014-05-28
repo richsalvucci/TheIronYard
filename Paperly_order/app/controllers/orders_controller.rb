@@ -38,9 +38,14 @@ private
   end
 
   def order_params
+    puts params.inspect
     params.require(:order).permit(:customer_name,
       :customer_id,
       :product_id,
+      :personalization,
+      :color_one,
+      :pattern,
+      :color_two,
       products_attributes: [:product,:name, :_destroy])
   end 
 end

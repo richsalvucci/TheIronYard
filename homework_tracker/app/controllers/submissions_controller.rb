@@ -17,6 +17,7 @@ class SubmissionsController < ApplicationController
 
   def create
     # authorize! :create, Submission
+    @homeworks = Homework.all
     @submission = Submission.create submission_params.merge(user_id: current_user.id)
     if @submission.save
       flash[:notice] = "Thank You"

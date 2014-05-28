@@ -2,8 +2,7 @@
   =form_for @surfboard do |f|
     %div.board_type{class: "board_type"}
       = f.label :board_type
-      = f.select :board_type, options_for_select(Surfboard::BOARD_TYPE, @surfboard.board_type), include_blank: "Select", board_url: new_surfboard_path 
-
+      = f.select :board_type, options_for_select(Surfboard::BOARD_TYPE, @surfboard.board_type), include_blank: "Select", board_url: new_surfboard_path
     = f.label :materials
     = f.select :materials,  options_for_select(Surfboard::MATERIAL, @surfboard.materials), include_blank: "Select"
     %div.fin_setup
@@ -27,10 +26,10 @@
     %div.thickness
       = f.label :thickness
       = f.select :thickness, options_for_select(@options[:thickness], @surfboard.thickness), include_blank: "Select" 
-    %div.graphics{"data-placement" => "left", "data-toggle" => "tooltip", :title => "Tell us what you what your board to look like. Airbrushing, Resin Tint, Acid Spash?", :type => "input"} 
+    %div.graphics{"data-placement" => "right", "data-toggle" => "tooltip", :title => "Tell us what you what your board to look like. Airbrushing, Resin Tint, Acid Spash?", :type => "input"} 
       =f.label :graphics
       =f.text_area :graphics 
-    %div.instructions{"data-placement" => "left", "data-toggle" => "tooltip", :title => "This is where you would request options like single to double concave or a step-deck.", :type => "input"} 
+    %div.instructions{"data-placement" => "right", "data-toggle" => "tooltip", :title => "This is where you would request options like single to double concave or a step-deck.", :type => "input"} 
       =f.label :special_instructions
       =f.text_area :special_instructions  
      

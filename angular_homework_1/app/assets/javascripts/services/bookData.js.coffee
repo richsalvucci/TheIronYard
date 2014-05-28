@@ -52,7 +52,8 @@ angular.module("Book").factory("bookData", ['$http', ($http) ->
         title:formData.editBookTitle
         author:formData.editBookAuthor
         description:formData.editBookDescription
-    
+    console.log "dude"          
+    console.log formData
     $http.put("/books/#{formData.editBookId}.json", data).success( (data) ->
       console.log(data)
       book = _.findWhere(bookData.data.books, {id: parseInt(formData.editBookId)})

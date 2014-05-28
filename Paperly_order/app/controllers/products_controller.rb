@@ -39,7 +39,7 @@ private
     params.require(:product).permit(:name,
       :price,
       :description,
-      :product_type
-      options_attributes: [:color_one,:color_two,:pattern,:personalization :_destroy])
+      :product_type,
+      options_attributes: [:color_one,:color_two,:pattern,:personalization, :_destroy])
   end 
 end

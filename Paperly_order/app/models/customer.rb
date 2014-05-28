@@ -1,5 +1,7 @@
 class Customer < ActiveRecord::Base
-    has_many :orders
+  has_many :purchase_orders
+  has_many :orders, through: :purchase_orders
+  has_many :customers, through: :purchase_orders
   STATE = ["AK",  
     "AL", 
     "AR",   

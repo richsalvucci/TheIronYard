@@ -25,9 +25,11 @@
     $scope.formData.editBookTitle = book.title
     $scope.formData.editBookAuthor = book.author
     $scope.formData.editBookDescription = book.description
+    $scope.formData.editBookId = $scope.data.bookId
 
   $scope.editBook = ->
     console.log "edit"
+    console.log $scope.formData
     bookData.updateBook($scope.formData)
     $scope.returnHome()
 

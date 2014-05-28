@@ -20,6 +20,7 @@ class SurfboardsController < ApplicationController
       params[:board_type] = "Longboard"
     end
     @options = Surfboard.select_board_type(params[:board_type])
+    @surfboard.board_type = params[:board_type]
     respond_to do |format|
       format.js
       format.html
@@ -30,6 +31,7 @@ class SurfboardsController < ApplicationController
     @surfboard = Surfboard.create surfboard_params
     respond_to do |format|
       format.js
+      format.html { redirect_to root_path}
     end
   end
 

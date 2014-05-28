@@ -1,43 +1,20 @@
-== README
+== To get the project running
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* This project uses MySQL2 (I use Sequel Pro) It also uses RVM.
 
-Things you may want to cover:
+* Install Ruby 2.1.1
 
-* Ruby version
+* Git Clone https://github.com/richsalvucci/custom_surfboard.git
 
-* System dependencies
+* In the command line: gem install bundler
 
-* Configuration
+* In the command line: bundle install
 
-* Database creation
+* In the command line: rake db:create
 
-* Database initialization
+* In the command line: rake db:migrate
 
-* How to run the test suite
+* In the command line: rails server
 
-* Services (job queues, cache servers, search engines, etc.)
+* Open a browser and go to localhost:3000
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Custom Surfboard</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
-</html>
